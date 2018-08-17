@@ -33,9 +33,7 @@ class Event
   end
 
   def standard_deviation_age
-
-    ages.map do |age|
-      age - average_age
-    end
+    square_root = Math.sqrt(squared.sum / squared.count)
+    square_root.round(2)
   end
 end
